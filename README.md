@@ -1,26 +1,28 @@
-This is a simple Express-based API that provides endpoints for creating quizzes, submitting answers, and retrieving quiz results. The service does not require any external databases, as data is stored in-memory. This makes it simple and quick to get started, but note that data will be lost when the service is restarted.
+This is a simple Express-based API that provides endpoints for creating quizzes, submitting answers, and retrieving quiz results. 
+The service does not require any external databases, as data is stored in-memory. This makes it simple and quick to get started, but note that data will be lost when the service is restarted.**
 
-Getting Started with the Quiz App:
+# Getting Started with the Quiz App:
 This project was bootstrapped with https://github.com/expressjs/generator?tab=readme-ov-file
 
-Setup Instructions:
+# Setup Instructions:
 Follow the steps below to set up and run the service
 
-1. Clone the Repository to your local machine.
-git clone <repo_url>
-cd <repo_name>
+- Clone the Repository to your local machine: 
+  `git clone <repo_url>`, 
+  `cd <repo_name>`
 
-2. Install Dependencies
-npm install
+- Install Dependencies: 
+`npm install`
 
-3. Access the Service
-npm start
+- Access the Service: 
+`npm start`
 
-API Endpoints
-1. Create a new quiz:
-POST http://localhost:3000/api/quiz
+# API Endpoints
+
+1. Create a new quiz: `POST http://localhost:3000/api/quiz`
 
 Request body: 
+
 {
     "title": "My Quiz App",
     "questions": [
@@ -61,10 +63,10 @@ Request body:
 }
 
 Response:
+
 "Quiz question submitted"
 
-2. Get quiz by ID (without answers)
-GET http://localhost:3000/api/quiz/1
+2. Get quiz by ID (without answers): `GET http://localhost:3000/api/quiz/1`
 
 Response: 
 {
@@ -104,8 +106,7 @@ Response:
     ]
 }
 
-4. Submit Answer
-POST http://localhost:3000/api/quiz/1/question/1/userid/1
+3. Submit Answer: `POST http://localhost:3000/api/quiz/1/question/1/userid/1`
 
 Request body:
 {
@@ -119,8 +120,7 @@ Response:
     "answer": "no"
 }
 
-4. Get Results
-GET http://localhost:3000/api/quiz/1/userId/1
+4. Get Results: `GET http://localhost:3000/api/quiz/1/userId/1`
 
 Response:
 {
